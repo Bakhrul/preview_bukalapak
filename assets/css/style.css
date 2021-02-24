@@ -417,7 +417,7 @@ body {
 
 @media(max-width:360px) {
     .single-product-element {
-        margin-right: 5px;
+        margin-right: 10px;
     }
 
     .single-product-element .single-product-image img {
