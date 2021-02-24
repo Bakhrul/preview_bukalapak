@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="">
+    <header>
+        <nav class="bg-white border-bottom-grey-1 py-15px position-fixed w-100 top d-flex align-items-center"
+            style="height:60px;z-index: 3;">
+            <div class="container-fluid">
+                <div class="position-relative">
+                    <a href="javascript:void(0)" class="text-decoration-none position-absolute left c-primary-black"><i
+                            class="fas fa-arrow-left text-u-lg"></i></a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+
+                    <div class="c-primary-black text-u-lg font-weight-500">Keranjang Belanja</div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main style="padding-bottom: 7em;">
+        <section class="border-bottom-grey-2 py-15px position-fixed bg-white w-100" style="top:60px;z-index: 2;">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <div class=" d-flex align-items-center">
+                    <label class="container-checkbox" style="margin: 0 7.5px 0 0 !important;">
+                        <input type="checkbox" class="checkbox-custom">
+                        <span class="checkmark-custom"></span>
+                    </label>
+                    <div class="d-flex align-items-center">
+                        <div class="font-weight-500 text-u-base c-primary-black">Pilih Semua</div>
+                        <div class="text-u-sm pl-4 c-primary-grey " style="padding:0 0 0 5px;">(0/2)</div>
+                    </div>
+                </div>
+                <button class="btn btn-white border-none outline-none text-u-sm c-primary-red font-weight-500"
+                    type="button">Hapus</button>
+            </div>
+        </section>
+        <section style="padding-top:140px" class="cart-group">
+            <!-- looping berdasarkan toko -->
+            <div class="cart-element border-top-grey-2 border-bottom-grey-2 mb-4">
+                <div class="cart-header">
+                    <div class="container-fluid d-flex align-items-center">
+                        <label class="container-checkbox" style="margin: 0 7.5px 0 0 !important;">
+                            <input type="checkbox" class="checkbox-custom">
+                            <span class="checkmark-custom"></span>
+                        </label>
+                        <svg version="1.1" viewBox="0 0 24 24" class="svg-icon svg-fill" size="medium"
+                            style="width: 24px; height: 24px;">
+                            <path fill="#5C6066" stroke="none" pid="0" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M22.914 12.939l-1.692-5.85H2.778l-1.692 5.85a.546.546 0 0 0 .546.698h1.637v7.094c0 .301.244.546.546.546h10.368v-7.64h4.365v7.64h1.637a.546.546 0 0 0 .546-.546v-7.094h1.637a.546.546 0 0 0 .546-.698zM12 19.094H5.452v-5.457H12v5.457zm8.73-13.642H3.27V3.269c0-.301.243-.546.545-.546h16.37c.302 0 .546.245.546.546v2.183z"
+                                _fill="#000"></path>
+                        </svg>
+                        <div class="font-weight-500 text-u-base ms-2 c-primary-black">Vyatta Indonesia</div>
+                    </div>
+                </div>
+                <div class="cart-body border-top-grey-2">
+                    <!-- looping berdasarkan item -->
+                    <div class="cart-items">
+                        <div class="container-fluid d-flex">
+                            <label class="container-checkbox" style="margin: 3px 7.5px 0 0 !important;">
+                                <input type="checkbox" class="checkbox-custom">
+                                <span class="checkmark-custom"></span>
+                            </label>
+                            <div class="w-100">
+                                <div class="d-flex justify-content-between w-100">
+                                    <div>
+                                        <div
+                                            class="text-product-eclipse font-weight-normal text-u-base c-primary-black">
+                                            VYATTA TURBO
+                                            GAN
+                                            65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                            Macbook</div>
+                                        <div class="text-u-sm font-weight-normal c-primary-grey">HITAM</div>
+                                    </div>
+                                    <div class="cart-image-box ms-2">
+                                        <img src="assets/image/small-image.jpeg" class="border-grey-2">
+                                    </div>
+                                </div>
+                                <div class="c-primary-grey text-u-xs mt-2"><strike>Rp889.000</strike></div>
+                                <div class="text-u-base font-weight-600 c-primary-black">Rp399.000</div>
+                                <div class="d-flex justify-content-between mt-4">
+                                    <div class="d-flex group-counter-cart">
+                                        <button
+                                            class="btn bg-fafafa c-primary-grey text-u-sm border-radius-right-none border-grey-2 border-right-none"><i
+                                                class="fas fa-minus"></i></button>
+                                        <input type="number" value="1"
+                                            class="text-u-sm form-control border-grey-2 border-radius-none text-center c-primary-black">
+                                        <button
+                                            class="btn bg-fafafa c-primary-grey text-u-sm border-grey-2 border-radius-left-none border-left-none"><i
+                                                class="fas fa-plus"></i></button>
+                                    </div>
+                                    <div><button
+                                            class="btn bg-white border-none outline-none c-primary-grey text-u-lg "><i
+                                                class="fas fa-trash"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- berhenti looping berdasarkan item -->
+                    <!-- looping berdasarkan item -->
+                    <div class="cart-items">
+                        <div class="container-fluid d-flex">
+                            <label class="container-checkbox" style="margin: 3px 7.5px 0 0 !important;">
+                                <input type="checkbox" class="checkbox-custom">
+                                <span class="checkmark-custom"></span>
+                            </label>
+                            <div class="w-100">
+                                <div class="d-flex justify-content-between w-100">
+                                    <div>
+                                        <div
+                                            class="text-product-eclipse font-weight-normal text-u-base c-primary-black">
+                                            VYATTA TURBO
+                                            GAN
+                                            65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                            Macbook</div>
+                                        <div class="text-u-sm font-weight-normal c-primary-grey">HITAM</div>
+                                    </div>
+                                    <div class="cart-image-box ms-2">
+                                        <img src="assets/image/small-image.jpeg" class="border-grey-2">
+                                    </div>
+                                </div>
+                                <div class="c-primary-grey text-u-xs mt-2"><strike>Rp889.000</strike></div>
+                                <div class="text-u-base font-weight-600 c-primary-black">Rp399.000</div>
+                                <div class="d-flex justify-content-between mt-4">
+                                    <div class="d-flex group-counter-cart">
+                                        <button
+                                            class="btn bg-fafafa c-primary-grey text-u-sm border-radius-right-none border-grey-2 border-right-none"><i
+                                                class="fas fa-minus"></i></button>
+                                        <input type="number" value="1"
+                                            class="text-u-sm form-control border-grey-2 border-radius-none text-center c-primary-black">
+                                        <button
+                                            class="btn bg-fafafa c-primary-grey text-u-sm border-grey-2 border-radius-left-none border-left-none"><i
+                                                class="fas fa-plus"></i></button>
+                                    </div>
+                                    <div><button
+                                            class="btn bg-white border-none outline-none c-primary-grey text-u-lg "><i
+                                                class="fas fa-trash"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- berhenti looping berdasarkan item -->
+                </div>
+                <div class="cart-footer border-top-grey-2 bg-white py-15px">
+                    <div class="container-fluid d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="text-u-sm c-primary-grey" style="letter-spacing:2px;">SUBTOTAL</div>
+                            <div class="text-u-base font-weight-600 c-primary-black">Rp1.190.000</div>
+                        </div>
+                        <div>
+                            <button
+                                class="btn bg-primary-red border-none outline-none text-white font-weight-600 text-u-base"
+                                style="padding:7px 25px;">Bayar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- berhenti looping berdasarkan toko -->
+            <!-- looping berdasarkan toko -->
+            <div class="cart-element border-top-grey-2 border-bottom-grey-2 mb-3">
+                <div class="cart-header">
+                    <div class="container-fluid d-flex align-items-center">
+                        <label class="container-checkbox" style="margin: 0 7.5px 0 0 !important;">
+                            <input type="checkbox" class="checkbox-custom">
+                            <span class="checkmark-custom"></span>
+                        </label>
+                        <svg version="1.1" viewBox="0 0 24 24" class="svg-icon svg-fill" size="medium"
+                            style="width: 24px; height: 24px;">
+                            <path fill="#5C6066" stroke="none" pid="0" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M22.914 12.939l-1.692-5.85H2.778l-1.692 5.85a.546.546 0 0 0 .546.698h1.637v7.094c0 .301.244.546.546.546h10.368v-7.64h4.365v7.64h1.637a.546.546 0 0 0 .546-.546v-7.094h1.637a.546.546 0 0 0 .546-.698zM12 19.094H5.452v-5.457H12v5.457zm8.73-13.642H3.27V3.269c0-.301.243-.546.545-.546h16.37c.302 0 .546.245.546.546v2.183z"
+                                _fill="#000"></path>
+                        </svg>
+                        <div class="font-weight-500 text-u-base ms-2 c-primary-black">Vyatta Indonesia</div>
+                    </div>
+                </div>
+                <div class="cart-body border-top-grey-2">
+                    <!-- looping berdasarkan item -->
+                    <div class="cart-items">
+                        <div class="container-fluid d-flex">
+                            <label class="container-checkbox" style="margin: 3px 7.5px 0 0 !important;">
+                                <input type="checkbox" class="checkbox-custom">
+                                <span class="checkmark-custom"></span>
+                            </label>
+                            <div class="w-100">
+                                <div class="d-flex justify-content-between w-100">
+                                    <div>
+                                        <div
+                                            class="text-product-eclipse font-weight-normal text-u-base c-primary-black">
+                                            VYATTA TURBO
+                                            GAN
+                                            65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                            Macbook</div>
+                                        <div class="text-u-sm font-weight-normal c-primary-grey">HITAM</div>
+                                    </div>
+                                    <div class="cart-image-box ms-2">
+                                        <img src="assets/image/small-image.jpeg" class="border-grey-2">
+                                    </div>
+                                </div>
+                                <div class="c-primary-grey text-u-xs mt-2"><strike>Rp889.000</strike></div>
+                                <div class="text-u-base font-weight-600 c-primary-black">Rp399.000</div>
+                                <div class="d-flex justify-content-between mt-4">
+                                    <div class="d-flex group-counter-cart">
+                                        <button
+                                            class="btn bg-fafafa c-primary-grey text-u-sm border-radius-right-none border-grey-2 border-right-none"><i
+                                                class="fas fa-minus"></i></button>
+                                        <input type="number" value="1"
+                                            class="text-u-sm form-control border-grey-2 border-radius-none text-center">
+                                        <button
+                                            class="btn bg-fafafa c-primary-grey text-u-sm border-grey-2 border-radius-left-none border-left-none"><i
+                                                class="fas fa-plus"></i></button>
+                                    </div>
+                                    <div><button
+                                            class="btn bg-white border-none outline-none c-primary-grey text-u-lg "><i
+                                                class="fas fa-trash"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- berhenti looping berdasarkan item -->
+                </div>
+                <div class="cart-footer border-top-grey-2 bg-white py-15px">
+                    <div class="container-fluid d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="text-u-sm c-primary-grey" style="letter-spacing:2px;">SUBTOTAL</div>
+                            <div class="text-u-base font-weight-600 c-primary-black">Rp1.190.000</div>
+                        </div>
+                        <div>
+                            <button
+                                class="btn bg-primary-red border-none outline-none text-white font-weight-600 text-u-base"
+                                style="padding:7px 25px;">Bayar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white py-15px mb-3">
+            <div class="container-fluid">
+                <h5 class="text-u-lg c-primary-black font-weight-600">Rekomendasi Buat Kamu</h5>
+                <div class="slider-product mt-4">
+                    <div class="single-product-element">
+                        <div class="single-product-image border-grey-2 position-relative">
+                            <img src="assets/image/image-product.jpeg">
+                            <span
+                                class="position-absolute top-0 start-0 bg-primary-red text-white text-u-xs font-weight-500 text-center"
+                                style="width:60px;border-bottom-right-radius: 50px;padding-right:5px;">30%</span>
+                        </div>
+                        <div class="single-product-body">
+                            <div class="height-title-product-setting">
+                                <div class="text-product-eclipse font-weight-normal text-u-sm c-primary-black">
+                                    VYATTA TURBO
+                                    GAN
+                                    65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                    Macbook</div>
+                            </div>
+                            <div class="d-flex align-items-start" style="height:25px;">
+                                <div class="text-u-very-xs c-primary-grey me-1"><strike>Rp1.190.000</strike></div>
+                                <div class="text-u-xs c-primary-red font-weight-600">Rp1.190.000</div>
+                            </div>
+                            <div class="d-flex align-items-center" style="height:20px;">
+                                <div class="d-flex">
+                                    <i class="fas fa-star text-u-very-xs c-primary-yellow"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-yellow"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-yellow"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-yellow"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                </div>
+                                <div class="text-u-very-xs c-primary-grey ms-1">(10 Ulasan)</div>
+                            </div>
+                            <button class="btn bg-fafafa border-none outline-none w-100 mt-4 c-primary-black text-u-sm"
+                                type="button" style="padding:10px 5px;"><i
+                                    class="fas fa-shopping-cart"></i>&ensp;Tambah</button>
+                        </div>
+                    </div>
+                    <div class="single-product-element">
+                        <div class="single-product-image border-grey-2">
+                            <img src="assets/image/image-product.jpeg">
+                        </div>
+                        <div class="single-product-body">
+                            <div class="height-title-product-setting">
+                                <div class="text-product-eclipse font-weight-normal text-u-sm c-primary-black">
+                                    VYATTA TURBO
+                                    GAN
+                                    65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                    Macbook</div>
+                            </div>
+                            <div class="d-flex align-items-start" style="height:25px;">
+                                <div class="text-u-xs c-primary-black font-weight-600">Rp1.190.000</div>
+                            </div>
+                            <div class="d-flex align-items-center" style="height:20px;">
+                                <div class="d-flex">
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                </div>
+                                <div class="text-u-very-xs c-primary-grey ms-1">(0 Ulasan)</div>
+                            </div>
+                            <button class="btn bg-fafafa border-none outline-none w-100 mt-4 c-primary-black text-u-sm"
+                                type="button" style="padding:10px 5px;"><i
+                                    class="fas fa-shopping-cart"></i>&ensp;Tambah</button>
+                        </div>
+                    </div>
+                    <div class="single-product-element">
+                        <div class="single-product-image border-grey-2">
+                            <img src="assets/image/image-product.jpeg">
+                        </div>
+                        <div class="single-product-body">
+                            <div class="height-title-product-setting">
+                                <div class="text-product-eclipse font-weight-normal text-u-sm c-primary-black">
+                                    VYATTA TURBO
+                                    GAN
+                                    65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                    Macbook</div>
+                            </div>
+                            <div class="d-flex align-items-start" style="height:25px;">
+                                <div class="text-u-xs c-primary-black font-weight-600">Rp1.190.000</div>
+                            </div>
+                            <div class="d-flex align-items-center" style="height:20px;">
+                                <div class="d-flex">
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                </div>
+                                <div class="text-u-very-xs c-primary-grey ms-1">(0 Ulasan)</div>
+                            </div>
+                            <button class="btn bg-fafafa border-none outline-none w-100 mt-4 c-primary-black text-u-sm"
+                                type="button" style="padding:10px 5px;"><i
+                                    class="fas fa-shopping-cart"></i>&ensp;Tambah</button>
+                        </div>
+                    </div>
+
+                    <div class="single-product-element">
+                        <div class="single-product-image border-grey-2">
+                            <img src="assets/image/image-product.jpeg">
+                        </div>
+                        <div class="single-product-body">
+                            <div class="height-title-product-setting">
+                                <div class="text-product-eclipse font-weight-normal text-u-sm c-primary-black">
+                                    VYATTA TURBO
+                                    GAN
+                                    65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                    Macbook</div>
+                            </div>
+                            <div class="d-flex align-items-start" style="height:25px;">
+                                <div class="text-u-xs c-primary-black font-weight-600">Rp1.190.000</div>
+                            </div>
+                            <div class="d-flex align-items-center" style="height:20px;">
+                                <div class="d-flex">
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                </div>
+                                <div class="text-u-very-xs c-primary-grey ms-1">(0 Ulasan)</div>
+                            </div>
+                            <button class="btn bg-fafafa border-none outline-none w-100 mt-4 c-primary-black text-u-sm"
+                                type="button" style="padding:10px 5px;"><i
+                                    class="fas fa-shopping-cart"></i>&ensp;Tambah</button>
+                        </div>
+                    </div>
+                    <div class="single-product-element">
+                        <div class="single-product-image border-grey-2">
+                            <img src="assets/image/image-product.jpeg">
+                        </div>
+                        <div class="single-product-body">
+                            <div class="height-title-product-setting">
+                                <div class="text-product-eclipse font-weight-normal text-u-sm c-primary-black">
+                                    VYATTA TURBO
+                                    GAN
+                                    65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                    Macbook</div>
+                            </div>
+                            <div class="d-flex align-items-start" style="height:25px;">
+                                <div class="text-u-xs c-primary-black font-weight-600">Rp1.190.000</div>
+                            </div>
+                            <div class="d-flex align-items-center" style="height:20px;">
+                                <div class="d-flex">
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                </div>
+                                <div class="text-u-very-xs c-primary-grey ms-1">(0 Ulasan)</div>
+                            </div>
+                            <button class="btn bg-fafafa border-none outline-none w-100 mt-4 c-primary-black text-u-sm"
+                                type="button" style="padding:10px 5px;"><i
+                                    class="fas fa-shopping-cart"></i>&ensp;Tambah</button>
+                        </div>
+                    </div>
+                    <div class="single-product-element">
+                        <div class="single-product-image border-grey-2">
+                            <img src="assets/image/image-product.jpeg">
+                        </div>
+                        <div class="single-product-body">
+                            <div class="height-title-product-setting">
+                                <div class="text-product-eclipse font-weight-normal text-u-sm c-primary-black">
+                                    VYATTA TURBO
+                                    GAN
+                                    65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                    Macbook</div>
+                            </div>
+                            <div class="d-flex align-items-start" style="height:25px;">
+                                <div class="text-u-xs c-primary-black font-weight-600">Rp1.190.000</div>
+                            </div>
+                            <div class="d-flex align-items-center" style="height:20px;">
+                                <div class="d-flex">
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                </div>
+                                <div class="text-u-very-xs c-primary-grey ms-1">(0 Ulasan)</div>
+                            </div>
+                            <button class="btn bg-fafafa border-none outline-none w-100 mt-4 c-primary-black text-u-sm"
+                                type="button" style="padding:10px 5px;"><i
+                                    class="fas fa-shopping-cart"></i>&ensp;Tambah</button>
+                        </div>
+                    </div>
+                    <div class="single-product-element">
+                        <div class="single-product-image">
+                            <img src="assets/image/image-product.jpeg">
+                        </div>
+                        <div class="single-product-body">
+                            <div class="height-title-product-setting">
+                                <div class="text-product-eclipse font-weight-normal text-u-sm c-primary-black">
+                                    VYATTA TURBO
+                                    GAN
+                                    65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                    Macbook</div>
+                            </div>
+                            <div class="d-flex align-items-start" style="height:25px;">
+                                <div class="text-u-xs c-primary-black font-weight-600">Rp1.190.000</div>
+                            </div>
+                            <div class="d-flex align-items-center" style="height:20px;">
+                                <div class="d-flex">
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                </div>
+                                <div class="text-u-very-xs c-primary-grey ms-1">(0 Ulasan)</div>
+                            </div>
+                            <button class="btn bg-fafafa border-none outline-none w-100 mt-4 c-primary-black text-u-sm"
+                                type="button" style="padding:10px 5px;"><i
+                                    class="fas fa-shopping-cart"></i>&ensp;Tambah</button>
+                        </div>
+                    </div>
+                    <div class="single-product-element">
+                        <div class="single-product-image border-grey-2">
+                            <img src="assets/image/image-product.jpeg">
+                        </div>
+                        <div class="single-product-body">
+                            <div class="height-title-product-setting">
+                                <div class="text-product-eclipse font-weight-normal text-u-sm c-primary-black">
+                                    VYATTA TURBO
+                                    GAN
+                                    65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                    Macbook</div>
+                            </div>
+                            <div class="d-flex align-items-start" style="height:25px;">
+                                <div class="text-u-xs c-primary-black font-weight-600">Rp1.190.000</div>
+                            </div>
+                            <div class="d-flex align-items-center" style="height:20px;">
+                                <div class="d-flex">
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                </div>
+                                <div class="text-u-very-xs c-primary-grey ms-1">(0 Ulasan)</div>
+                            </div>
+                            <button class="btn bg-fafafa border-none outline-none w-100 mt-4 c-primary-black text-u-sm"
+                                type="button" style="padding:10px 5px;"><i
+                                    class="fas fa-shopping-cart"></i>&ensp;Tambah</button>
+                        </div>
+                    </div>
+                    <div class="single-product-element">
+                        <div class="single-product-image border-grey-2">
+                            <img src="assets/image/image-product.jpeg">
+                        </div>
+                        <div class="single-product-body">
+                            <div class="height-title-product-setting">
+                                <div class="text-product-eclipse font-weight-normal text-u-sm c-primary-black">
+                                    VYATTA TURBO
+                                    GAN
+                                    65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                    Macbook</div>
+                            </div>
+                            <div class="d-flex align-items-start" style="height:25px;">
+                                <div class="text-u-xs c-primary-black font-weight-600">Rp1.190.000</div>
+                            </div>
+                            <div class="d-flex align-items-center" style="height:20px;">
+                                <div class="d-flex">
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                </div>
+                                <div class="text-u-very-xs c-primary-grey ms-1">(0 Ulasan)</div>
+                            </div>
+                            <button class="btn bg-fafafa border-none outline-none w-100 mt-4 c-primary-black text-u-sm"
+                                type="button" style="padding:10px 5px;"><i
+                                    class="fas fa-shopping-cart"></i>&ensp;Tambah</button>
+                        </div>
+                    </div>
+                    <div class="single-product-element">
+                        <div class="single-product-image border-grey-2">
+                            <img src="assets/image/image-product.jpeg">
+                        </div>
+                        <div class="single-product-body">
+                            <div class="height-title-product-setting">
+                                <div class="text-product-eclipse font-weight-normal text-u-sm c-primary-black">
+                                    VYATTA TURBO
+                                    GAN
+                                    65W PD 2 Power Delivery Type C & QC Fast Charger - iPhone - Samsung - Oppo -
+                                    Macbook</div>
+                            </div>
+                            <div class="d-flex align-items-start" style="height:25px;">
+                                <div class="text-u-xs c-primary-black font-weight-600">Rp1.190.000</div>
+                            </div>
+                            <div class="d-flex align-items-center" style="height:20px;">
+                                <div class="d-flex">
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                    <i class="fas fa-star text-u-very-xs c-primary-grey-second"></i>
+                                </div>
+                                <div class="text-u-very-xs c-primary-grey ms-1">(0 Ulasan)</div>
+                            </div>
+                            <button class="btn bg-fafafa border-none outline-none w-100 mt-4 c-primary-black text-u-sm"
+                                type="button" style="padding:10px 5px;"><i
+                                    class="fas fa-shopping-cart"></i>&ensp;Tambah</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="position-fixed w-100 py-15px bg-white border-top-grey-1" style="bottom:0 !important">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <div>
+                    <div class="text-u-sm c-primary-grey font-weight-500">TOTAL BELANJA</div>
+                    <div class="text-u-base font-weight-600 c-primary-black">Rp1.190.000</div>
+                    <div class="text-u-xs c-primary-grey font-weight-normal mt-1">Belum termasuk ongkir</div>
+                </div>
+                <div>
+                    <button class="btn bg-primary-red border-none outline-none text-white font-weight-600 text-u-base"
+                        style="padding:7px 25px;">Bayar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/fontawesome-free/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider-product').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                arrows: false,
+                // autoplay: true,
+                infinite: false,
+                autoplaySpeed: 1500,
+                responsive: [{
+                        breakpoint: 2000,
+                        settings: {
+                            slidesToShow: 6
+                        }
+                    },
+                    {
+                        breakpoint: 1700,
+                        settings: {
+                            slidesToShow: 5
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    }, {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 360,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>
