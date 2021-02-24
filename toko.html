@@ -979,10 +979,7 @@
             initSlider();
         });
         $('body').on('click', '.tab-item', function () {
-            $('.slider-product').slick('destroy');
-            setTimeout(() => {
-                initSlider();
-            }, 1);
+            $('.slider-product').slick('refresh');
         });    
         function initSlider() {
             $('.slider-product').slick({
