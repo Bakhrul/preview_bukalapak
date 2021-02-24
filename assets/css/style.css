@@ -97,7 +97,6 @@ textarea:focus {
 .bg-fafafa {
     background: #fafafa !important;
 }
-
 .py-15px {
     padding: 15px 0;
 }
@@ -149,7 +148,7 @@ textarea:focus {
     }
 }
 
-@media(max-width:350px) {
+@media(max-width:330px) {
     .text-u-lg {
         font-size: 15px;
     }
@@ -167,11 +166,11 @@ textarea:focus {
     }
 
     .text-u-very-xs {
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 
-@media(max-width:300px) {
+@media(max-width:280px) {
     .text-u-lg {
         font-size: 14px;
     }
@@ -186,7 +185,7 @@ textarea:focus {
 
     .text-u-xs {
         font-size: 10px;
-    }
+    }    
 }
 
 /* checkbox */
@@ -332,7 +331,7 @@ body {
     }
 }
 
-@media(max-width:350px) {
+@media(max-width:330px) {
     .cart-element .cart-body .cart-image-box img {
         width: 42px;
         height: 42px;
@@ -395,10 +394,6 @@ body {
     padding: 20px 10px 10px 15px;
 }
 
-.single-product-element {
-    margin-right: 15px;
-}
-
 @media(max-width:992px) {
     .single-product-element .single-product-image img {
         height: 200px;
@@ -406,26 +401,18 @@ body {
 }
 
 @media(max-width:576px) {
-    .single-product-element {
-        margin-right: 10px;
-    }
-
     .single-product-element .single-product-image img {
         height: 180px;
     }
 }
 
-@media(max-width:350px) {
-    .single-product-element {
-        margin-right: 10px;
-    }
-
+@media(max-width:330px) {
     .single-product-element .single-product-image img {
         height: 200px;
     }
 }
 
-@media(max-width:300px) {
+@media(max-width:280px) {
     .single-product-element .single-product-image img {
         height: 220px;
     }
@@ -436,7 +423,7 @@ body {
     margin-bottom: 10px;
 }
 
-@media(max-width:350px) {
+@media(max-width:330px) {
     .height-title-product-setting {
         height: 40px;
         margin-bottom: 0 !important;
@@ -473,7 +460,7 @@ body {
     }
 }
 
-@media(max-width:350px) {
+@media(max-width:330px) {
     .image-single-brand {
         width: 50px;
         height: 50px;
@@ -509,7 +496,7 @@ body {
         width: 50% !important;        
     }
 }
-@media(max-width:350px){
+@media(max-width:330px){
     .grid-system-product{
         width: 100% !important;
     }
