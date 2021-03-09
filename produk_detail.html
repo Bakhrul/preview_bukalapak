@@ -35,13 +35,14 @@
         </nav>
     </header>
     <main>
-        <section class="">
-            <div class="slider-banner">
+        <section class="position-relative">
+            <div class="slider-banner slider-banner-product-detail">
                 <img src="assets/image/image-product.jpeg">
-                <img src="assets/image/banner-2.png">
                 <img src="assets/image/image-product.jpeg">
-                <img src="assets/image/banner-2.png">
+                <img src="assets/image/image-product.jpeg">
+                <img src="assets/image/image-product.jpeg">
             </div>
+            <div class="slick-slider-dots"></div>
         </section>
         <!-- start paling populer -->
         <section class="bg-white py-15px">
@@ -987,6 +988,8 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+       
+
         $(document).ready(function () {
             $('.slider-product').slick({
                 slidesToShow: 5,
@@ -1036,6 +1039,8 @@
                 arrows: false,
                 autoplay: true,
                 infinite: false,
+                dots: true,
+                appendDots: $('.slick-slider-dots'),
                 autoplaySpeed: 1500,
             });
         });
