@@ -871,6 +871,8 @@ a {
 
 .shadow-navbar-fixed-wrapper .navbar-fixed-group .navbar-fixed-group-center input {
     background: #f2f2f2;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
 
 .shadow-navbar-fixed-wrapper .navbar-fixed-group .icon-input-nav {
